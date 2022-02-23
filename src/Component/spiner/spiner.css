@@ -1,0 +1,73 @@
+@keyframes ldio-z3xh687c88 {
+    0% { opacity: 1 }
+    100% { opacity: 0 }
+  }
+  .ldio-z3xh687c88 div {
+    left: 105.555px;
+    top: 51.075px;
+    position: absolute;
+    animation: ldio-z3xh687c88 linear 1s infinite;
+    background: #3c0f0f;
+    width: 15.89px;
+    height: 34.05px;
+    border-radius: 7.945px / 12.258000000000001px;
+    transform-origin: 7.945px 62.425px;
+  }.ldio-z3xh687c88 div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -0.8888888888888888s;
+    background: #3c0f0f;
+  }.ldio-z3xh687c88 div:nth-child(2) {
+    transform: rotate(40deg);
+    animation-delay: -0.7777777777777778s;
+    background: #f91a10;
+  }.ldio-z3xh687c88 div:nth-child(3) {
+    transform: rotate(80deg);
+    animation-delay: -0.6666666666666666s;
+    background: #e46b43;
+  }.ldio-z3xh687c88 div:nth-child(4) {
+    transform: rotate(120deg);
+    animation-delay: -0.5555555555555556s;
+    background: #edb195;
+  }.ldio-z3xh687c88 div:nth-child(5) {
+    transform: rotate(160deg);
+    animation-delay: -0.4444444444444444s;
+    background: #2aa7c9;
+  }.ldio-z3xh687c88 div:nth-child(6) {
+    transform: rotate(200deg);
+    animation-delay: -0.3333333333333333s;
+    background: #06628d;
+  }.ldio-z3xh687c88 div:nth-child(7) {
+    transform: rotate(240deg);
+    animation-delay: -0.2222222222222222s;
+    background: #04284d;
+  }.ldio-z3xh687c88 div:nth-child(8) {
+    transform: rotate(280deg);
+    animation-delay: -0.1111111111111111s;
+    background: #3c0f0f;
+  }.ldio-z3xh687c88 div:nth-child(9) {
+    transform: rotate(320deg);
+    animation-delay: 0s;
+    background: #f91a10;
+  }
+  .loadingio-spinner-spinner-dhakt4wv9y8 {
+    width: 227px;
+    height: 227px;
+    display: inline-block;
+    overflow: hidden;
+  }
+  .ldio-z3xh687c88 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+  }
+  .ldio-z3xh687c88 div { box-sizing: content-box; }
+
+  .loadingio-spinner-spinner-dhakt4wv9y8{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
