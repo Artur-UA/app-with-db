@@ -41,8 +41,7 @@ export default class SwapiService {
       return  this._transformStarShips(getStar)
     }
 
-    _transformPlanet(planet){
-      console.log(planet);
+    _transformPlanet = (planet) => {
       const id = parseInt(planet.url.match(/\d+/));
       return{
         id: id,
@@ -53,7 +52,7 @@ export default class SwapiService {
       }
     }
 
-    _transformStarShips(starships){
+    _transformStarShips = (starships) => {
       const id = parseInt(starships.url.match(/\d+/));
       return{
         id: id,
@@ -68,7 +67,7 @@ export default class SwapiService {
       }
     }
 
-    _transformPerson(person){
+    _transformPerson = (person) => {
       const id = parseInt(person.url.match(/\d+/));
       return{
         id: id,
