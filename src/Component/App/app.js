@@ -27,7 +27,7 @@ export default class App extends Component{
                 <ItemList onItemSelect={this.onPersonSelected}/>
               </div>
               <div className="col-md-6">
-                <PersonDetails /* personId={this.state.selectedPerson} */ />
+                <PersonDetails personId={this.state.selectedPerson} />
               </div>
             </div>
           </div>
