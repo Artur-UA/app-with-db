@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import ErrMsg from '../error/error'
-
 import './random-planet.css';
 import SwapiService from '../../services/services';
 import Spiner from "../spiner/spiner";
+import ErrorBtn from '../error-btn/error-btn';
+
 export default class RandomPlanet extends Component {
 
   swapiService = new SwapiService();
@@ -87,6 +88,7 @@ const PlanetView = (planet) => {
             <span>{planet.planet.diametr}</span>
           </li>
         </ul>
+        <ErrorBtn/>
       </div>
     </React.Fragment>
   )

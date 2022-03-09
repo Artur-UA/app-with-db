@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SwapiService from '../../services/services';
 import './person-details.css';
+import ErrorBtn from '../error-btn/error-btn';
 
 export default class PersonDetails extends Component {
   swapiService = new SwapiService();
@@ -14,8 +15,6 @@ export default class PersonDetails extends Component {
     }
 
     componentDidUpdate(prevProps){
-        console.log(prevProps);
-        console.log(this.props);
         if (this.props.personId !== prevProps.personId) {
             this.updatePerson();
         }
@@ -33,10 +32,6 @@ export default class PersonDetails extends Component {
         })
     }
   render() {
-
-    console.log(this.state);
-    console.log(this.props);
-
     if(!this.state.person){
         return <span>Select a person from a list</span>;
     }
@@ -65,6 +60,7 @@ export default class PersonDetails extends Component {
               <span>{eyeColor}</span>
             </li>
           </ul>
+          <ErrorBtn/>
         </div>
       </div>
     )
