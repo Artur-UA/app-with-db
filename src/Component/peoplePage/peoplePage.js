@@ -2,9 +2,9 @@ import React, {Component} from "react";
 import ItemList from "../item-list/item-list";
 import PersonDetails from "../person-details/person-details";
 import ErrorIndicator from '../error-indicator/error-indicator'
-
+import SwapiService from '../../services/services';
 export default class PeoplePage extends Component {
-
+    swapiService = new SwapiService();
     state = {
         selectedPerson: null,
         hasErr: false
@@ -29,11 +29,10 @@ export default class PeoplePage extends Component {
         if (this.state.hasErr){
             return <ErrorIndicator/>
         }
-
         return(
             <div className="row mb2">
                 <div className="col-md-6">
-                    <ItemList onItemSelect={this.onPersonSelected}/>
+                    <ItemList onItemSelect={this.onPersonSelected} getData={this.props.getData}/>
                 </div>
                 <div className="col-md-6">
                     <PersonDetails personId={this.state.selectedPerson} />

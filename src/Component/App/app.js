@@ -4,7 +4,10 @@ import Header from "../header/header";
 import PeoplePage from "../peoplePage/peoplePage";
 import RandomPlanet from "../random-planet/random-planet";
 import ErrorIndicator from '../error-indicator/error-indicator'
+import SwapiService from '../../services/services';
 export default class App extends Component{
+
+  swapiService = new SwapiService();
 
   state={
     selectedPerson: null,
@@ -28,9 +31,9 @@ export default class App extends Component{
           <div>
             <Header />
             <RandomPlanet />
-            <PeoplePage />
-            <PeoplePage />
-            <PeoplePage />
+            <PeoplePage getData={this.swapiService.getAllPeople}/>
+            <PeoplePage getData={this.swapiService.getAllPlanets}/>
+            <PeoplePage getData={this.swapiService.getAllStarships}/>
 
             
 

@@ -67,7 +67,6 @@ export default class RandomPlanet extends Component {
 
 
 const PlanetView = (planet) => {
-  console.log(planet);
   return (
     <React.Fragment>
       <img className="planet-image"

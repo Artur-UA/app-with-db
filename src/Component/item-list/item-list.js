@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import Spiner from '../spiner/spiner';
-import SwapiService from '../../services/services';
 import './item-list.css';
 
 
 export default class ItemList extends Component {
-  swapiService = new SwapiService();
 
   state = {
-    peopleLists: null
+    itemLists: null
   };
 
 
   componentDidMount() {
-    this.swapiService.getAllPeople()
-      .then((peopleList) => {
+
+    const { getData } = this.props;
+    console.log(this.props);
+    getData()
+      .then((itemList) => {
         this.setState({
-          peopleLists: peopleList
+          itemLists: itemList
         })
       })
   }
 
   renderItems(data){
-    console.log(data);
     return data.map(({id, name}) => {
       return (
         <li className="list-group-item" 
@@ -35,13 +35,12 @@ export default class ItemList extends Component {
   }
 
   render() {
-    console.log(this.state);
 
-    if(!this.state.peopleLists){
+    if(!this.state.itemLists){
       return <Spiner />
     }
 
-    const items = this.renderItems(this.state.peopleLists);
+    const items = this.renderItems(this.state.itemLists);
 
     return (
       <ul className="item-list list-group">
