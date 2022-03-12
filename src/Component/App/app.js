@@ -31,9 +31,9 @@ export default class App extends Component{
           <div>
             <Header />
             <RandomPlanet />
-            <PeoplePage getData={this.swapiService.getAllPeople}/>
-            <PeoplePage getData={this.swapiService.getAllPlanets}/>
-            <PeoplePage getData={this.swapiService.getAllStarships}/>
+            <PeoplePage getData={this.swapiService.getAllPeople} renderItem={ (item) => `${item.name} (${item.gender}, ${item.birthYear})` } />
+            {/* <PeoplePage getData={this.swapiService.getAllPlanets} renderItem={ (item) => `${item.name} - Diameter : ${item.diametr}`}/>
+            <PeoplePage getData={this.swapiService.getAllStarships} renderItem={ (item) => `${item.name} - Model : ${item.model}`}/> */}
 
             
 
