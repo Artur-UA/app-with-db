@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import ItemList from "../item-list/item-list";
-import PersonDetails from "../person-details/person-details";
+import ItemDetails from "../item-details/item-details";
 import ErrorIndicator from '../error-indicator/error-indicator'
 import SwapiService from '../../services/services';
 
@@ -65,7 +65,7 @@ export default class PeoplePage extends Component {
                 </div>
             </div> */
 
-            <Row left={ <ItemList onItemSelect={this.onPersonSelected} getData={this.props.getData} renderItem={this.props.renderItem}/>} right={ <ErrorBoudry> <PersonDetails personId={this.state.selectedPerson} /> </ErrorBoudry>} />
+            <Row left={ <ItemList onItemSelect={this.onPersonSelected} getData={this.props.getData} renderItem={this.props.renderItem}/>} right={ <ErrorBoudry> <ItemDetails personId={this.state.selectedPerson} getPictures={this.props.getPictures} getInfo={this.props.getInfo} /> </ErrorBoudry>} />
         )
     }
 }
