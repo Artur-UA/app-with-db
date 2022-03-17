@@ -37,6 +37,13 @@ export default class App extends Component{
               renderItem={ (item) => `${item.name} (${item.gender}, ${item.birthYear})` } 
               getPictures={this.swapiService.getPersonImage} 
               getInfo={this.swapiService.getPerson} 
+              fields={
+                [
+                  {id: 1, field: 'gender', label: 'Gender'},
+                  {id: 2, field: 'birthYear', label: 'Birth Year'},
+                  {id: 3, field: 'eyeColor', label: 'Eye Color'}
+                ]
+              }
             />
 
             <PeoplePage 

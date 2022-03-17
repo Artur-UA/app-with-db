@@ -31,14 +31,34 @@ export default class ItemDetails extends Component {
             })
         })
     }
+
+
+    renderFields(data){
+      return data.map((itemss) => {
+        const { field, label } = itemss;
+        console.log(field);
+        /* const fields = this.state.item`.${field}`; 
+        console.log(fields); */
+        return (
+            <li className="list-group-item" key={this.props.id} >
+              <span className="term">{label}</span>
+              <span>{field}</span>
+            </li>
+        );
+      });
+    }
+
   render() {
     if(!this.state.item){
         return <span>Select a person from a list</span>;
     }
 
-    const { id, name, gender, eyeColor, birthYear} = this.state.item;
+    /* const { id, name, gender, eyeColor, birthYear} = this.state.item; */
 
+
+    
     console.log(this.state);
+    const items = this.renderFields(this.props.fields);
     return (
       <div className="item-details card">
         <img className="item-image"
@@ -46,9 +66,10 @@ export default class ItemDetails extends Component {
           alt="picture person"/>
 
         <div className="card-body">
-          <h4>{name} {this.props.personId}</h4>
+          <h4>{this.state.item.name} {this.props.personId}</h4>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">
+            {items}
+           {/*  <li className="list-group-item">
               <span className="term">Gender</span>
               <span>{gender}</span>
             </li>
@@ -59,7 +80,7 @@ export default class ItemDetails extends Component {
             <li className="list-group-item">
               <span className="term">Eye Color</span>
               <span>{eyeColor}</span>
-            </li>
+            </li> */}
           </ul>
           <ErrorBtn/>
         </div>

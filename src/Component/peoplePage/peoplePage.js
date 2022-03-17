@@ -65,7 +65,7 @@ export default class PeoplePage extends Component {
                 </div>
             </div> */
 
-            <Row left={ <ItemList onItemSelect={this.onPersonSelected} getData={this.props.getData} renderItem={this.props.renderItem}/>} right={ <ErrorBoudry> <ItemDetails personId={this.state.selectedPerson} getPictures={this.props.getPictures} getInfo={this.props.getInfo} /> </ErrorBoudry>} />
+            <Row left={ <ItemList onItemSelect={this.onPersonSelected} getData={this.props.getData} renderItem={this.props.renderItem}/>} right={ <ErrorBoudry> <ItemDetails personId={this.state.selectedPerson} getPictures={this.props.getPictures} getInfo={this.props.getInfo} fields={this.props.fields} /> </ErrorBoudry>} />
         )
     }
 }
