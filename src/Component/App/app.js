@@ -39,9 +39,9 @@ export default class App extends Component{
               getInfo={this.swapiService.getPerson} 
               fields={
                 [
-                  {id: 1, field: 'gender', label: 'Gender'},
-                  {id: 2, field: 'birthYear', label: 'Birth Year'},
-                  {id: 3, field: 'eyeColor', label: 'Eye Color'}
+                  {field: 'gender', label: 'Gender'},
+                  {field: 'birthYear', label: 'Birth Year'},
+                  {field: 'eyeColor', label: 'Eye Color'}
                 ]
               }
             />
@@ -51,13 +51,27 @@ export default class App extends Component{
               renderItem={ (item) => `${item.name} - Diameter : ${item.diametr}`} 
               getPictures={this.swapiService.getPlanetImage} 
               getInfo={this.swapiService.getPlanet}
+              fields={
+                [
+                  {field: 'diametr', label: 'Diameter'},
+                  {field: 'population', label: 'Population'},
+                  {field: 'rotation', label: 'Rotation'}
+                ]
+              }
             />
 
             <PeoplePage 
               getData={this.swapiService.getAllStarships} 
               renderItem={ (item) => `${item.name} - Model : ${item.model}`} 
               getPictures={this.swapiService.getStarshipImage} 
-              getInfo={this.swapiService.getStarship} 
+              getInfo={this.swapiService.getStarship}
+              fields={
+                [
+                  {field: 'model', label: 'Model'},
+                  {field: 'cargoCapacity', label: 'Cargo Capacity'},
+                  {field: 'passengers', label: 'Passengers'}
+                ]
+              }
             />
 
           </div>

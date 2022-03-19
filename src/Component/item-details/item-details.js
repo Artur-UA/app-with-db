@@ -36,13 +36,10 @@ export default class ItemDetails extends Component {
     renderFields(data){
       return data.map((itemss) => {
         const { field, label } = itemss;
-        console.log(field);
-        /* const fields = this.state.item`.${field}`; 
-        console.log(fields); */
         return (
             <li className="list-group-item" key={this.props.id} >
               <span className="term">{label}</span>
-              <span>{field}</span>
+              <span>{this.state.item[field]}</span>
             </li>
         );
       });
@@ -63,7 +60,7 @@ export default class ItemDetails extends Component {
       <div className="item-details card">
         <img className="item-image"
           src={this.state.image} 
-          alt="picture person"/>
+          alt="picture error"/>
 
         <div className="card-body">
           <h4>{this.state.item.name} {this.props.personId}</h4>
